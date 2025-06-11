@@ -3,7 +3,7 @@
 :root {
     --cor-primaria: #000000;
     --cor-secundaria: #F6F6F6;
-    --cor-terciaria: #22D4FD;
+    --cor-terciaria: #ff88db;
     --cor-hover: #272727;
 
     --fonte-primaria: 'Krona One', sans-serif;
@@ -28,32 +28,39 @@ body{
 }
 .cabecalho__menu__link{
     font-family: var(--fonte-secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     color: var(--cor-terciaria);
     text-decoration: none;
+    padding: 5px;
+}
+.cabecalho__menu__link:hover{
+    background-color: #ff8ace81;
+    border-radius: 40px;
+    padding: 5px;
 }
 .apresentacao{
     padding: 5% 15%;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 82px;
 }
 .apresentacao__conteudo{
-    width: 615px;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 .apresentacao__conteudo__titulo{
-    font-size: 36px;
+    font-size: 2.25rem;
     font-family: var(--fonte-primaria);
 }
 .texto-destaque{
     color: var(--cor-terciaria);
 }
 .apresentacao__conteudo__texto{
-    font-size: 24px;
+    font-size: 1.5rem;
     font-family: var(--fonte-secundaria);
 }
 .apresentacao__links{
@@ -66,17 +73,17 @@ body{
 .apresentacao__links__subtitulo{
     font-family: var(--fonte-primaria);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 .apresentacao__links__link{
     display: flex;
     justify-content: center;
     gap: 16px;
     border: 2px solid var(--cor-terciaria);
-    width: 378px;
+    width: 50%;
     text-align: center;
     border-radius: 8px;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 600;
     padding: 21.5px 0;
     text-decoration: none;
@@ -84,11 +91,12 @@ body{
     font-family: var(--fonte-secundaria);
 }
 .apresentacao__links__link:hover{
-    background-color: var(--cor-hover);
+    background-color: #ff8ace81;
 }
-.apresentacao .foto{
+.apresentacao__imagem{
     border-radius: 50px;
     border: 4px solid var(--cor-terciaria);
+    width: 50%;
 }
 .rodape{
     color: var(--cor-primaria);
@@ -96,6 +104,30 @@ body{
     padding: 24px;
     text-align: center;
     font-family: var(--fonte-secundaria);
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
+}
+
+@media (max-width: 1200px){
+    .cabecalho{
+        padding: 10% 0 0;
+        display: flex;
+        justify-content: center;
+    }
+    .apresentacao{
+        flex-direction: column-reverse;
+        padding: 10%;
+    }
+    .apresentacao__conteudo{
+        width: auto;
+    }
+    .apresentacao__conteudo__titulo{
+        text-align: center;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1500px){
+    .apresentacao__links__navegacao{
+        width: 70%;
+    }
 }
